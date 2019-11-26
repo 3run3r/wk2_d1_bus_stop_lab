@@ -24,4 +24,11 @@ class Bus
     @passengers.clear
   end
 
+  def pick_up_all_from_queue(bus_stop)
+    bus_stop = find_bus_stop_by_name(name)
+    for passenger in bus_stop.queue
+      @passengers.push(passenger)
+    end
+  end
+
 end
